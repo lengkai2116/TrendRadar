@@ -49,13 +49,13 @@ notification:
       start: "20:00"  # 推送时间窗口开始（北京时间）
       end: "22:00"    # 推送时间窗口结束（北京时间）
     once_per_day: true  # 每天在时间窗口内只推送一次，如果 false，则窗口内每次执行都推送
-    push_record_retention_days: 7  # 推送记录保留天数
+    push_record_retention_days: 14  # 推送记录保留天数
 
   # 请务必妥善保管好 webhooks，不要公开
   # 如果你以 fork 的方式将本项目部署在 GitHub 上，请勿在此填写任何 webhooks，而是将 webhooks 填入 GitHub Secret
   # 不然轻则手机上收到奇怪的广告推送，重则存在更严重的安全隐患
   webhooks:
-    feishu_url: "" # 飞书机器人的 webhook URL
+    feishu_url: https://open.feishu.cn/open-apis/bot/v2/hook/3aa9fac3-fac9-4bda-8d07-59c089a3fac5 # 飞书机器人的 webhook URL
     dingtalk_url: "" # 钉钉机器人的 webhook URL
     wework_url: "" # 企业微信机器人的 webhook URL
     telegram_bot_token: "" # Telegram Bot Token
@@ -97,5 +97,7 @@ platforms:
     name: "微博"
   - id: "douyin"
     name: "抖音"
+  - id: "xiaohongshu"
+    name: "小红书"
   - id: "zhihu"
     name: "知乎"
